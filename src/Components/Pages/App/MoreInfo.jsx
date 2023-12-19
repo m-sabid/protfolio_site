@@ -1,11 +1,11 @@
 import React from "react";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaCheckCircle, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function MoreInfo() {
   return (
     <div className="grid gap-5 grid-cols-3">
-      <div className="col-span-1 font-bold">
-        <h2 className="text-secondary">My Achievements</h2>
+      <div className="md:col-span-1 col-span-3 font-bold">
+        <h2 className="text-secondary flex items-center gap-2"> <FaCheckCircle className="text-primary" /> My Achievements</h2>
         <ul className="flex flex-col gap-4 text-sm font-normal ">
           <li>Implemented elegant UI designs across various projects.</li>
           <li>
@@ -17,8 +17,8 @@ function MoreInfo() {
           </li>
         </ul>
       </div>
-      <div className="col-span-1 font-bold">
-        <h2 className="text-secondary">Crafted Expertise</h2>
+      <div className="md:col-span-1 col-span-3 font-bold">
+        <h2 className="text-secondary flex items-center gap-2"> <FaCheckCircle className="text-primary" /> Crafted Expertise</h2>
         <ul className="flex flex-col gap-4 text-sm font-normal ">
           <li>Meticulously honed skills in multiple programming languages.</li>
           <li>
@@ -31,8 +31,8 @@ function MoreInfo() {
           </li>
         </ul>
       </div>
-      <div className="col-span-1 font-bold">
-        <h2 className="text-secondary">Let's Connect</h2>
+      <div className="md:col-span-1 col-span-3 font-bold">
+        <h2 className="text-secondary flex items-center gap-2"> <FaCheckCircle className="text-primary" /> Let's Connect</h2>
         <ul className="flex flex-col gap-4 text-sm font-normal ">
           <li>
             <span className="flex items-center gap-1">
