@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import {
+  FaEdit,
   FaGlobe,
   FaHandHoldingUsd,
   FaInstagram,
@@ -119,19 +120,28 @@ const SideBar = ({ open, setOpen }) => {
 
         {/* Profile Section */}
         <div className="pt-16 flex flex-col items-center justify-center">
-          <div className="rounded-full overflow-hidden m-3 w-2/3 h-2/3">
-            <img src={profile} alt="" />
+          <div className="relative m-3 w-2/3 h-2/3">
+            <img className="rounded-full" src={profile} alt="Profile" />
+
+            {/* Transparent overlay */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 transition-opacity duration-300 bg-black rounded-full">
+              <div className="text-white flex items-center gap-2">
+                <FaEdit />
+                <span>Edit Profile</span>
+              </div>
+            </div>
           </div>
           <h3 className="text-2xl text-center mt-2 font-teko font-medium italic">
             {!open ? "Hasibul" : "Hasibul Islam"}
           </h3>
-          {open && <p className="my-3">Be your best. Never give up</p>}
+          {open && (
+            <p className="my-3 text-highlight">Be your best. Never give up</p>
+          )}
 
           {/* On close menu */}
           {!open && (
             <div>
-          
-              <div className="flex bg-red-500 flex-col items-center justify-center py-2 gap-4 mb-5 border-b-2 border-t-2 w-full border-neutral">
+              <div className="flex flex-col items-center justify-center py-2 gap-4 border-b-2 border-t-2 w-full border-neutral">
                 {SocialLinks?.map((dt, index) => {
                   return (
                     <>
@@ -148,8 +158,8 @@ const SideBar = ({ open, setOpen }) => {
 
         {/* On open Menu */}
         <div
-          className={`flex items-center justify-center py-2 gap-4 my-5 ${
-            open && "border-b-2 border-t-2"
+          className={`flex items-center justify-center py-2 gap-4 ${
+            open && "border-b-2"
           } w-full border-neutral`}
         >
           {open &&
@@ -164,7 +174,7 @@ const SideBar = ({ open, setOpen }) => {
             })}
         </div>
 
-        <ul className="pt-5 bg-green-500">
+        <ul className={`${open && "mt-4"}`}>
           {Menus?.map((Menu, index) => (
             <div key={index}>
               {Menu.subMenus && Menu.subMenus.length > 0 ? (
