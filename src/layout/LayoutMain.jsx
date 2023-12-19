@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import SideBar from "../Components/Shared/SideBar";
+import Footer from "../Components/Shared/Footer";
 
 const LayoutMain = () => {
   const [open, setOpen] = useState(true);
@@ -14,6 +15,7 @@ const LayoutMain = () => {
           <div>
             <Outlet />
           </div>
+            <Footer />
         </div>
       </div>
     </>

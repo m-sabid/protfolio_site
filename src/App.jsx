@@ -2,6 +2,7 @@ import AboutImage from "./Components/Pages/App/AboutImage";
 import AboutText from "./Components/Pages/App/AboutText";
 import DownloadResume from "./Components/Pages/App/DownloadResume";
 import MoreInfo from "./Components/Pages/App/MoreInfo";
+import SkillsComp from "./Components/Pages/App/SkillsComp";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <div className="w-full col-span-2 md:col-span-1 order-1 md:order-2">
           <div className="flex flex-col items-start">
             <div className="flex flex-col justify-center w-full">
-              <div className="md:h-[60vh] h-[30vh] bg-shadow mx-5">
+              <div className="md:h-[60vh] h-[40vh] bg-shadow mx-5">
                 <div className="h-full w-full mt-2 ml-2 bg-shadow overflow-hidden">
                   <AboutImage />
                 </div>
@@ -30,6 +31,9 @@ function App() {
         </div>
       </div>
       <MoreInfo />
+      <div className="my-10">
+        <SkillsComp />
+      </div>
     </>
   );
 }

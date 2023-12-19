@@ -135,7 +135,7 @@ const SideBar = ({ open, setOpen }) => {
             {!open ? "Hasibul" : "Hasibul Islam"}
           </h3>
           {open && (
-            <p className="my-3 text-highlight">Be your best. Never give up</p>
+            <p className="my-3 text-accent">Be your best. Never give up</p>
           )}
 
           {/* On close menu */}

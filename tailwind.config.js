@@ -12,6 +12,7 @@ export default {
           neutral: "#95a5a6",
           highlight: "#f39c12",
           shadow: "#FB7185",
+          dark:"#2D3748"
         },
       },
       "light",
@@ -29,6 +30,7 @@ export default {
         neutral: "#95a5a6",
         highlight: "#f39c12",
         shadow: "#FB7185",
+        dark:"#2D3748"
       },
     },
   },
